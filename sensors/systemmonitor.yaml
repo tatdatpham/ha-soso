@@ -2,3 +2,5 @@
   resources:
     - type: memory_free
     - type: processor_use
+    - type: ipv4_address
+    - type: last_boot

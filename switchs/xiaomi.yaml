@@ -1,0 +1,4 @@
+switchs:
+  name: Mi Switch 1
+  entities:
+    - lumi.158d0001e59b5c

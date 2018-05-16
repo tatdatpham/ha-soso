@@ -83,7 +83,7 @@ script: !include_dir_merge_list scripts/
 group: !include_dir_merge_named groups/
 
 xiaomi_aqara:
-        discovery_retry: 5
-        gateways:
-                - mac: 7811dcb7bb6d
-                  key: t16i6oz8wg8xc8pi
+  discovery_retry: 5
+  gateways:
+    - mac: 7811dcb7bb6d
+      key: t16i6oz8wg8xc8pi
