@@ -2,3 +2,23 @@ media_player.kd43x8000e:
   name:
   platform: cast
   unique_id: 2efde426-0375-4a21-60c6-9e5abb3e204c
+binary_sensor.switch_158d0001e59b5c:
+  name:
+  platform: xiaomi_aqara
+  unique_id: status158d0001e59b5c
+light.gateway_light_7811dcb7bb6d:
+  name:
+  platform: xiaomi_aqara
+  unique_id: rgb7811dcb7bb6d
+sensor.illumination_7811dcb7bb6d:
+  name:
+  platform: xiaomi_aqara
+  unique_id: illumination7811dcb7bb6d
+sensor.temperature_158d00020f527c:
+  name:
+  platform: xiaomi_aqara
+  unique_id: temperature158d00020f527c
+sensor.humidity_158d00020f527c:
+  name:
+  platform: xiaomi_aqara
+  unique_id: humidity158d00020f527c
