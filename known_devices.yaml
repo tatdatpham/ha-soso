@@ -1,32 +1,7 @@
-
-xiaomirepeaternetfpt:
-  hide_if_away: false
-  icon:
-  mac: 2A:6C:07:04:2A:42
-  name: XiaoMiRepeater.net.fpt
-  picture:
-  track: true
-
-rmproplus00bfacnetfpt:
-  hide_if_away: false
-  icon:
-  mac: 78:0F:77:00:BF:AC
-  name: RMPROPLUS-00-bf-ac.net.fpt
-  picture:
-  track: true
-
-9c50ee2894e8:
-  hide_if_away: false
-  icon:
-  mac: 9C:50:EE:28:94:E8
-  name: 9c50ee2894e8
-  picture:
-  track: true
-
 android23a7a003bee71167netfpt:
   hide_if_away: false
-  icon:
+  icon: mdi:account
   mac: 90:CD:B6:7C:44:A1
-  name: android-23a7a003bee71167.net.fpt
-  picture:
+  name: Tat Dat
+  gravatar: tatdat171@gmail.com
   track: true
