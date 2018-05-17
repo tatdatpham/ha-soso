@@ -1,0 +1,28 @@
+default_view:
+    view: yes
+    icon: mdi:home-assistant
+    entities:
+      - group.bedroom
+      - group.temperature
+      - group.weather_card_forecast
+
+bedroom:
+  name: Bed room
+  control: hidden
+  entities:
+    - sensor.temperature_158d00020f527c
+    - sensor.humidity_158d00020f527c
+    - light.gateway_light_7811dcb7bb6d
+
+temperature:
+    name: Temperature Sensors
+    view: yes
+    icon: mdi:weather-cloudy
+    entities:
+      - group.yahooweathercard
+      - group.weather
+      - group.weather_card_forecast
+      - group.bedroom
+      - group.thermostats
+      - group.camera_meteogram
+      - weather.yweather
