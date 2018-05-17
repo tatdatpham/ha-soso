@@ -19,7 +19,9 @@ Familia:
   entities:
     - device_tracker.tatdatphamnetfpt
     - device_tracker.adminsiphonenetfpt
+    - device_tracker.iphonenetfpt
     - device_tracker.laitrungvietnetfpt
+    - device_tracker.android23a7a003bee71167netfpt
 
 batterysensorlevel:
   icon: mdi:battery-charging-100
