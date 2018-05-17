@@ -115,7 +115,7 @@ mqtt:
   broker: 192.168.1.106
 
 xiaomi_aqara:
-  discovery_retry: 5
+  discovery_retry: 10
   gateways:
     - mac: 7811dcb7bb6d
       key: j8vcf3b8din16d4i
