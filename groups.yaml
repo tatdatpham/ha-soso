@@ -4,22 +4,21 @@ default_view:
     entities:
       - group.Familia
       - group.bedroom
-      - group.temperature
+      - group.guestroom
       - group.weather_card_today
       - group.weather_card_forecast
 
 bedroom:
-  icon: mdi:bed-empty
+  name: Bedroom
   entities:
     - sensor.temperature_158d00020f527c
     - sensor.humidity_158d00020f527c
-    - sensor.switch_158d0001e59b5c
     - light.gateway_light_7811dcb7bb6d
 
 Familia:
   entities:
-    - device_tracker.tatdatphamnote8
-    - device_tracker.tatdatphamiphone5s
+    - device_tracker.tatdatphamnetfpt
+    - device_tracker.adminsiphonenetfpt
     - device_tracker.laitrungvietnetfpt
 
 batterysensorlevel:
@@ -40,3 +39,7 @@ system:
     - sensor.network_in
     - sensor.network_out
     - sensor.last_boot
+guestroom:
+  name: Guest Room
+  entities:
+    - media_player.kd43x8000e
