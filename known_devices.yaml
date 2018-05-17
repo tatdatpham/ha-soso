@@ -5,3 +5,11 @@ android23a7a003bee71167netfpt:
   name: Tat Dat
   gravatar: tatdat171@gmail.com
   track: true
+
+laitrungvietnetfpt:
+  hide_if_away: false
+  icon:
+  mac: C0:63:94:05:DC:53
+  name: Viet Sut
+  picture: laitrungviet.neu@gmail.com
+  track: true  

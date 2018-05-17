@@ -115,14 +115,15 @@ device_tracker:
      - 192.168.1.218
      - 192.168.1.151
      - 192.168.1.169
-     - 192.168.1.218
-     - 192.168.1.253
+     - 192.168.1.151 #mi repeater 
+     - 192.168.1.176 #FPT play
+     - 192.168.1.253 #xiaomi gateway
+  - platform: mqtt
+    devices:
+      tatdat_iphone: 'hass/tatdat_iphone/localizacion'
+      tatdat_note8: 'hass/tatdatnote8/localizacion'
 
 notify:
-  - platform: slack
-    name: slack
-    api_key: !secret slack_api_key
-    default_channel: '#home-assistant'
   - platform: pushbullet
     api_key: !secret pushbullet_key
     name: pushbullet

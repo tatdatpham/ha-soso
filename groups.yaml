@@ -20,8 +20,10 @@ bedroom:
     - sneosr.battery_xiaomi_switch_01
     - light.gateway_light_7811dcb7bb6d
 
-tracker:
- - device_tracker.android23a7a003bee71167netfpt
+Familia:
+  entities:
+    - device_tracker.android23a7a003bee71167netfpt
+    - device_tracker.laitrungvietnetfpt
 
 batterysensorlevel:
   icon: mdi:battery-charging-100
