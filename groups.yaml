@@ -2,12 +2,11 @@ default_view:
     view: yes
     icon: mdi:home-assistant
     entities:
+      - group.Familia
       - group.bedroom
       - group.temperature
       - group.weather_card_today
       - group.weather_card_forecast
-      - group.tracker
-      - group.batterysensorlevel      
 
 bedroom:
   icon: mdi:bed-empty
@@ -15,14 +14,13 @@ bedroom:
   entities:
     - sensor.temperature_158d00020f527c
     - sensor.humidity_158d00020f527c
-    - sensor.battery_xiaomi_temperature
     - sensor.switch_158d0001e59b5c
-    - sneosr.battery_xiaomi_switch_01
     - light.gateway_light_7811dcb7bb6d
 
 Familia:
   entities:
-    - device_tracker.android23a7a003bee71167netfpt
+    - device_tracker.tatdatphamnote8
+    - device_tracker.tatdatphamiphone5s
     - device_tracker.laitrungvietnetfpt
 
 batterysensorlevel:

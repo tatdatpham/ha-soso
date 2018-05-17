@@ -1,8 +1,8 @@
-android23a7a003bee71167netfpt:
+tatdatphamnote8:
   hide_if_away: false
   icon: mdi:account
-  mac: 90:CD:B6:7C:44:A1
-  name: Tat Dat
+  mac: A0:C9:A0:E8:64:A7
+  name: Tat Dat 
   gravatar: tatdat171@gmail.com
   track: true
 
@@ -11,5 +11,13 @@ laitrungvietnetfpt:
   icon:
   mac: C0:63:94:05:DC:53
   name: Viet Sut
-  picture: laitrungviet.neu@gmail.com
+  picture: https://assets.halalstatic.com/assets/front/favicons/favicon-192x192-53f072d5bd4af8caae1185d6f3463fdba9aee7c40a2764c15f650bbfc59ebe67.png
+  track: true
+
+tatdatphamiphone5s:
+  hide_if_away: false
+  icon:
+  mac: C0:63:94:05:DC:53
+  name: Luffy
+  picture: https://www.fastworkx.com/web/assets/favicon/android-chrome-192x192.png
   track: true  

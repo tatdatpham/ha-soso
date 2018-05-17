@@ -2,9 +2,11 @@
   resources:
     - type: disk_use_percent
       arg: /
+    - type: memory_use_percent
     - type: memory_free
     - type: processor_use
     - type: ipv4_address
+      arg: eth0
     - type: network_in
       arg: eth0
     - type: network_out
