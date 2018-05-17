@@ -2,8 +2,8 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Mun So
   # Location required to calculate the time the sun rises and sets
-  latitude: 21.0333
-  longitude: 105.85
+  latitude: 20.9636894
+  longitude: 105.8221005
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 20
   # metric for Metric, imperial for Imperial
@@ -112,8 +112,7 @@ device_tracker:
     scan_options: " --privileged -sP "
     exclude:
      - 192.168.1.106
-     - 192.168.1.102   
-     - 192.168.1.169
+     - 192.168.1.102
      - 192.168.1.151 #mi repeater 
      - 192.168.1.176 #FPT play
      - 192.168.1.253 #xiaomi gateway

@@ -18,6 +18,24 @@ laitrungvietnetfpt:
   hide_if_away: false
   icon:
   mac: C0:63:94:05:DC:53
-  name: Viet Sut IP6
+  name: Viet Sut IP5
   picture: https://assets.halalstatic.com/assets/front/favicons/favicon-192x192-53f072d5bd4af8caae1185d6f3463fdba9aee7c40a2764c15f650bbfc59ebe67.png
   track: true
+
+iphonenetfpt:
+  hide_if_away: false
+  icon:
+  mac: A0:99:9B:31:22:90
+  name: Viet Sut
+  picture: https://kraveon.com/assets/images/fav/android-icon-192x192.png
+  track: true
+
+android23a7a003bee71167netfpt:
+  hide_if_away: false
+  icon:
+  mac: 90:CD:B6:7C:44:A1
+  name: Viet Anh
+  picture: https://www.primefaces.org/primeng/assets/showcase/favicon/android-icon-192x192.png
+  track: true
+
+
