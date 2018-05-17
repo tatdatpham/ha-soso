@@ -1,0 +1,9 @@
+- platform: xiaomi_aqara
+  name: Xiaomi switch 01
+  unique_id: illumination7811dcb7bb6d
+- platform: xiaomi_aqara
+  name: Xiaomi temperature
+  unique_id: temperature158d00020f527c
+- platform: xiaomi_aqara
+  name: Xiaomi humidity
+  unique_id: humidity158d00020f527c

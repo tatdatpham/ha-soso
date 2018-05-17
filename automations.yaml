@@ -1,24 +1,23 @@
-automation:
-  - alias: Entryway Button Right - Toggle Entry Light
-    trigger:
-      - platform: event
-        event_type: click
-        event_data:
-          entity_id: binary_sensor.switch_158d0001e59b5c
-          click_type: double
-    action:
-      - service: notify.pushbullet
-        data_template:
-          message: 'ALARM: Double click'
+- alias: Entryway Button Right - Toggle Entry Light
+  trigger:
+    - platform: event
+      event_type: click
+      event_data:
+        entity_id: binary_sensor.switch_158d0001e59b5c
+        click_type: double
+  action:
+    - service: notify.pushbullet
+      data_template:
+        message: 'ALARM: Double click'
 
-  - alias: Sensor low baterry
-    trigger:
-      - platform: numeric_state
-        entity_id:
-          - sensor.battery_xiaomi_temperature
-          - sneosr.battery_xiaomi_switch_01
-        below: 25
-    action:
-      - service: notify.pushbullet
-        data_template:
-          message: 'ALARM: Check battery of sensor. It is below 25%'
+- alias: Sensor low baterry
+  trigger:
+    - platform: numeric_state
+      entity_id:
+        - sensor.battery_xiaomi_temperature
+        - sneosr.battery_xiaomi_switch_01
+      below: 25
+  action:
+    - service: notify.pushbullet
+      data_template:
+        message: 'ALARM: Check battery of sensor. It is below 25%'

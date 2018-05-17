@@ -9,8 +9,8 @@ default_view:
       - group.batterysensorlevel      
 
 bedroom:
-  name: Bed room
-  control: hidden
+  icon: mdi:bed-empty
+  view: yes
   entities:
     - sensor.temperature_158d00020f527c
     - sensor.humidity_158d00020f527c
@@ -20,19 +20,20 @@ bedroom:
     - light.gateway_light_7811dcb7bb6d
 
 batterysensorlevel:
-  name: Battery sensor level
+  icon: mdi:battery-charging-100
   view: yes
   entities:
     - sensor.battery_xiaomi_temperature
     - sneosr.battery_xiaomi_switch_01
 
 system:
-    name: System
+    icon: mdi:settings
     view: yes
     entities:
-    - sensor.cpu_use
-    - sensor.disk_use_
-    - sensor.ram_free
-    - sensor.received_eth0
-    - sensor.sent_eth0
+    - sensor.ipv4_address
+    - sensor.processor_use
+    - sensor.memory_free
+    - sensor.disk_use_percent
+    - sensor.network_in
+    - sensor.network_out
     - sensor.last_boot
