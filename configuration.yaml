@@ -82,12 +82,8 @@ tts:
 cloud:
 
 group: !include groups.yaml
-#automation: !include automations.yaml
-#script: !include scripts.yaml
-
-automation: !include_dir_merge_list automations/
-script: !include_dir_merge_list scripts/
-#group: !include_dir_merge_named groups/
+automation: !include automations.yaml
+script: !include scripts.yaml
 
 xiaomi_aqara:
   discovery_retry: 10
@@ -105,3 +101,12 @@ device_tracker:
      - 192.168.1.218
      - 192.168.1.151
      - 192.168.1.169
+
+notify:
+  - platform: slack
+    name: slack
+    api_key: !secret slack_api_key
+    default_channel: '#home-assistant'
+  - platform: pushbullet
+    api_key: !secret pushbullet_key
+    name: pushbullet

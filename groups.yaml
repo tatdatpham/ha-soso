@@ -4,7 +4,9 @@ default_view:
     entities:
       - group.bedroom
       - group.temperature
+      - group.weather_card_today
       - group.weather_card_forecast
+      - group.batterysensorlevel      
 
 bedroom:
   name: Bed room
@@ -12,17 +14,25 @@ bedroom:
   entities:
     - sensor.temperature_158d00020f527c
     - sensor.humidity_158d00020f527c
+    - sensor.battery_xiaomi_temperature
+    - sensor.switch_158d0001e59b5c
+    - sneosr.battery_xiaomi_switch_01
     - light.gateway_light_7811dcb7bb6d
 
-temperature:
-    name: Temperature Sensors
+batterysensorlevel:
+  name: Battery sensor level
+  view: yes
+  entities:
+    - sensor.battery_xiaomi_temperature
+    - sneosr.battery_xiaomi_switch_01
+
+system:
+    name: System
     view: yes
-    icon: mdi:weather-cloudy
     entities:
-      - group.yahooweathercard
-      - group.weather
-      - group.weather_card_forecast
-      - group.bedroom
-      - group.thermostats
-      - group.camera_meteogram
-      - weather.yweather
+    - sensor.cpu_use
+    - sensor.disk_use_
+    - sensor.ram_free
+    - sensor.received_eth0
+    - sensor.sent_eth0
+    - sensor.last_boot
