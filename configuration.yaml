@@ -36,15 +36,30 @@ config:
 
 http:
   # Secrets are defined in the file secrets.yaml
-  # api_password: !secret http_password
+  api_password: !secret http_password
+  ssl_certificate: /etc/letsencrypt/live/munso.duckdns.org/fullchain.pem
+  ssl_key: /etc/letsencrypt/live/munso.duckdns.org/privkey.pem
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  # base_url: example.duckdns.org:8123
+  base_url: munso.duckdns.org
+  cors_allowed_origins:
+    - https://google.com
+    - https://www.home-assistant.io
+  trusted_networks:
+    - 127.0.0.1
+    - ::1
+    - 192.168.1.0/24
+  login_attempts_threshold: 5
 
 # Checks for available updates
 # Note: This component will send some information about your system to
 # the developers to assist with development of Home Assistant.
 # For more information, please see:
 # https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+
+duckdns:
+  domain: munso
+  access_token: !secret duck_dns_token
+
 updater:
   # Optional, allows Home Assistant developers to focus on popular components.
   include_used_components: true
@@ -100,7 +115,7 @@ mqtt:
   broker: 192.168.1.106
 
 xiaomi_aqara:
-  discovery_retry: 10
+  discovery_retry: 5
   gateways:
     - mac: 7811dcb7bb6d
       key: j8vcf3b8din16d4i
@@ -111,11 +126,10 @@ device_tracker:
     home_interval: 10
     scan_options: " --privileged -sP "
     exclude:
-     - 192.168.1.106
-     - 192.168.1.102
-     - 192.168.1.151 #mi repeater 
-     - 192.168.1.176 #FPT play
-     - 192.168.1.253 #xiaomi gateway
+     - 192.168.1.128 # Echo
+     - 192.168.1.102 # Xiaomi gateway 78:11:dc:b7:bb:6d
+     - 192.168.1.176 # FPT play b0:46:fc:c0:b2:d8 
+     - 192.168.1.253 # RM pro 78:0f:77:00:bf:ac  
   - platform: mqtt
     devices:
       tatdat_iphone: 'hass/tatdat_iphone/localizacion'
