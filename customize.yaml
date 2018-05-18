@@ -21,8 +21,25 @@ sensor.temperature_158d00020f527c:
 sensor.switch_158d0001e59b5c:
  friendly_name: Bedroom Switch 1
  icon: mdi:hockey-puck
-#sensor.pressure_158d0001ab3b2b:
-# friendly_name:  Study Pressure
-#binary_sensor.motion_sensor_158d0001a1f2ab:
-# friendly_name: Guest Room Occupancy
-# homebridge_hidden: false
+
+sensor.speedtest_download:
+  friendly_name: Download Rate
+sensor.speedtest_ping:
+  friendly_name: Last Ping
+sensor.speedtest_upload:
+  friendly_name: Upload Rate
+
+sensor.disk_free:
+  friendly_name: Disk free
+sensor.memory_use_percent:
+  friendly_name: Memory used %
+sensor.memory_free:
+  friendly_name: Memory free
+sensor.ipv4_address_eth0:
+  friendly_name: IP Internal
+sensor.network_in_eth0:
+  friendly_name: Network in
+sensor.network_out_eth0:
+  friendly_name: Network out
+sensor.disk_use_percent:
+  friendly_name: Disk used %
