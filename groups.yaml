@@ -10,34 +10,26 @@ default_view:
       - group.weather_card_today
       - group.weather_card_forecast
 
+#battery group
 batterysensorlevel:
   icon: mdi:battery-charging-100
   view: yes
   entities:
+    - group.bedroom_batterysensorlevel
+bedroom_batterysensorlevel:
+  control: hidden
+  entities:
     - sensor.battery_xiaomi_temperature
     - sensor.battery_xiaomi_switch_01
 
+
+#system group config
 system:
   icon: mdi:settings
   view: yes
   entities:
     - group.system_monitor
     - group.internet_speed
-
-bedroom:
-  name: Bedroom
-  entities:
-    - sensor.temperature_158d00020f527c
-    - sensor.humidity_158d00020f527c
-    - light.gateway_light_7811dcb7bb6d
-
-Familia:
-  entities:
-    - device_tracker.homeassistant_note8
-    - device_tracker.iphonenetfpt
-    - device_tracker.laitrungvietnetfpt
-    - device_tracker.android23a7a003bee71167netfpt
-
 
 system_monitor:
     name: System PI
@@ -61,15 +53,27 @@ internet_speed:
       - sensor.speedtest_ping
       - sensor.speedtest_upload
 
+#room group config
+bedroom:
+  name: Bedroom
+  entities:
+    - sensor.temperature_158d00020f527c
+    - sensor.humidity_158d00020f527c
+    - light.gateway_light_7811dcb7bb6d
+
 guestroom:
   name: Guest Room
+  control: hidden
   entities:
     - media_player.kd43x8000e
 
-weather:
-  name: Weather
+#device tracker group config
+Familia:
   entities:
-    - input_boolean.weather
+    - device_tracker.homeassistant_note8
+    - device_tracker.iphonenetfpt
+    - device_tracker.laitrungvietnetfpt
+    - device_tracker.android23a7a003bee71167netfpt
 
 tatdat_phone_group:
   name: Tat Dat Phone
@@ -78,3 +82,11 @@ tatdat_phone_group:
     - sensor.connection_tat_dat
     - sensor.gps_accuracy
     - sensor.phone_battery_tat_dat    
+
+
+#weather group config
+weather:
+  name: Weather
+  entities:
+    - input_boolean.weather
+
