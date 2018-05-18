@@ -168,12 +168,39 @@
     'windy-variant': 'cloudy-day-3',
     exceptional: '!!',
   };
+  
+  var _WEATHER_TO_NAME = {
+    cloudy: 'Cloudy',
+    fog: 'Fog',
+    hail: 'Hail',
+    lightning: 'Onweer',
+    'lightning-rainy': 'Onweer',
+    partlycloudy: 'Partly Cloudy',
+    pouring: 'Pouring',
+    rainy: 'Rainy',
+    snowy: 'Snowy',
+    'snowy-rainy': 'Snowy Rainy',
+    sunny: 'Sunny',
+    windy: 'Windy',
+    'windy-variant': 'Windy Variant',
+    exceptional: '!',
+  };
 
 
   var _DEGREE_TEXT = [
     'N', 'NNO', 'NO', 'ONO', 'O', 'OZO', 'ZO', 'ZZO',
     'Z', 'ZZW', 'ZW', 'WZW', 'W', 'WNW', 'NW', 'NNW', 'N'
   ];
+  
+  var _DAY_TO_DAY = {
+    Mon: 'Mon',
+    Tue: 'Tue',
+    Wed: 'Wed',
+    Thu: 'Thu',
+    Fri: 'Fri',
+    Sat: 'Sat',
+    Sun: 'Sun',
+  };
 
   Polymer({
     is: 'custom-weather-card',
