@@ -40,7 +40,7 @@
     {% if value_json.acc %}
       {{ value_json.acc }}
     {% else %}
-      {{ states('sensor.gps_accuracy_tatdat') }}
+      {{ states('sensor.gps_accuracy') }}
     {% endif %}
 
 - platform: template

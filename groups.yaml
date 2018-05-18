@@ -40,7 +40,7 @@ Familia:
 
 
 system_monitor:
-    icon: mdi:settings
+    name: System PI
     control: hidden
     entities:
       - sensor.disk_use_percent_
@@ -54,7 +54,7 @@ system_monitor:
       - sensor.last_boot
 
 internet_speed:
-    icon: mdi:speedometer
+    name: Internet Speed
     control: hidden
     entities:
       - sensor.speedtest_download
