@@ -11,8 +11,8 @@
 #  destination: Home
 
 - platform: mqtt
-  state_topic: owntracks/homeassistant/note8
-  name: Phone Battery (Tat Dat)
+  state_topic: 'owntracks/homeassistant/note8'
+  name: 'Phone Battery (Tat Dat)'
   unit_of_measurement: '%'
   value_template: >
     {% if value_json.batt %}
@@ -21,8 +21,8 @@
       {{ states('sensor.phone_battery_tatdat') }}
     {% endif %}
 - platform: mqtt
-  state_topic: owntracks/homeassistant/note8
-  name: Connection (Tat Dat)
+  state_topic: 'owntracks/homeassistant/note8'
+  name: Connection (Tat Dat)'
   value_template: >
     {% if value_json.conn %}
       {% if value_json.conn == 'w' %}
@@ -34,8 +34,8 @@
       {{ states('sensor.connection_tatdat') }}
     {% endif %}
 - platform: mqtt
-  state_topic: owntracks/homeassistant/note8
-  name: GPS Accuracy
+  state_topic: 'owntracks/homeassistant/note8'
+  name: 'GPS Accuracy'
   value_template: >
     {% if value_json.acc %}
       {{ value_json.acc }}

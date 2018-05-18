@@ -10,6 +10,20 @@ default_view:
       - group.weather_card_today
       - group.weather_card_forecast
 
+batterysensorlevel:
+  icon: mdi:battery-charging-100
+  view: yes
+  entities:
+    - sensor.battery_xiaomi_temperature
+    - sensor.battery_xiaomi_switch_01
+
+system:
+  icon: mdi:settings
+  view: yes
+  entities:
+    - group.system_monitor
+    - group.internet_speed
+
 bedroom:
   name: Bedroom
   entities:
@@ -24,16 +38,10 @@ Familia:
     - device_tracker.laitrungvietnetfpt
     - device_tracker.android23a7a003bee71167netfpt
 
-batterysensorlevel:
-  icon: mdi:battery-charging-100
-  view: yes
-  entities:
-    - sensor.battery_xiaomi_temperature
-    - sensor.battery_xiaomi_switch_01
 
-system:
+system_monitor:
     icon: mdi:settings
-    view: yes
+    control: hidden
     entities:
       - sensor.disk_use_percent_
       - sensor.disk_free_
@@ -47,7 +55,7 @@ system:
 
 internet_speed:
     icon: mdi:speedometer
-    view: yes
+    control: hidden
     entities:
       - sensor.speedtest_download
       - sensor.speedtest_ping
