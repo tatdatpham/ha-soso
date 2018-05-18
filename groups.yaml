@@ -35,13 +35,32 @@ system:
     icon: mdi:settings
     view: yes
     entities:
-    - sensor.ipv4_address
-    - sensor.processor_use
-    - sensor.memory_free
-    - sensor.disk_use_percent
-    - sensor.network_in
-    - sensor.network_out
-    - sensor.last_boot
+      - sensor.cpu_used
+      - sensor.ram_free
+      - sensor.disk_free_
+      - sensor.ipv4_address_eth0
+      - sensor.last_boot
+      - sensor.since_last_boot
+      - sensor.signal_strength
+      - sensor.link_quality
+      - sensor.current_log_level
+      - sensor.ram_available
+      - sensor.processor_use
+      - sensor.memory_free
+      - binary_sensor.workday_sensor
+      - sensor.ha_installed_version
+      - sensor.ha_current_version
+      - sensor.home_assistant_up_time
+
+internetSpeed:
+    icon: mdi:speedometer
+    view: yes
+    entities:
+      - sensor.speedtest_ping 
+      - sensor.speedtest_upload
+      - sensor.speedtest_download
+      - sensor.external_ip
+
 guestroom:
   name: Guest Room
   entities:
