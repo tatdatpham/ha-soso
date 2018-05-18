@@ -74,7 +74,7 @@ weather:
 tatdat_phone_group:
   name: Tat Dat Phone
   entities:
-    - sensor.connection_tatdat
-    - sensor.gps_accuracy_tatdat
-    - sensor.phone_battery_tatdat
     - device_tracker.homeassistant_note8
+    - sensor.connection_tatdat
+    - sensor.gps_accuracy
+    - sensor.phone_battery_tatdat    
