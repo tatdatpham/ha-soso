@@ -38,4 +38,10 @@ android23a7a003bee71167netfpt:
   picture: https://www.primefaces.org/primeng/assets/showcase/favicon/android-icon-192x192.png
   track: true
 
-
+homeassistant_note8:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Tat Dat
+  picture: /local/avatar/tatdat.png
+  track: true
