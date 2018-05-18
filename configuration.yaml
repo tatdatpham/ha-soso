@@ -132,7 +132,7 @@ xiaomi_aqara:
   discovery_retry: 5
   gateways:
     - mac: 7811dcb7bb6d
-      key: 2ypq9y75v4pgj48f
+      key: khwyj0gswngc9vtc
 
 #Device tracker
 device_tracker:

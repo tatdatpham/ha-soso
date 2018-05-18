@@ -75,6 +75,6 @@ tatdat_phone_group:
   name: Tat Dat Phone
   entities:
     - device_tracker.homeassistant_note8
-    - sensor.connection_tatdat
+    - sensor.connection_tat_dat
     - sensor.gps_accuracy
-    - sensor.phone_battery_tatdat    
+    - sensor.phone_battery_tat_dat    

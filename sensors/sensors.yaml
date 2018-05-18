@@ -18,7 +18,7 @@
     {% if value_json.batt %}
       {{ value_json.batt }}
     {% else %}
-      {{ states('sensor.phone_battery_tatdat') }}
+      {{ states('sensor.phone_battery_tat_dat') }}
     {% endif %}
 - platform: mqtt
   state_topic: 'owntracks/homeassistant/note8'
@@ -31,7 +31,7 @@
         4G
       {% endif %}
     {% else %}
-      {{ states('sensor.connection_tatdat') }}
+      {{ states('sensor.connection_tat_dat') }}
     {% endif %}
 - platform: mqtt
   state_topic: 'owntracks/homeassistant/note8'
