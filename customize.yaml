@@ -30,9 +30,9 @@ sensor.speedtest_upload:
   friendly_name: Upload Rate
 
 sensor.disk_free:
-  friendly_name: Disk free
+  friendly_name: Disk free /
 sensor.memory_use_percent:
-  friendly_name: Memory used %
+  friendly_name: Memory used
 sensor.memory_free:
   friendly_name: Memory free
 sensor.ipv4_address_eth0:
@@ -42,4 +42,4 @@ sensor.network_in_eth0:
 sensor.network_out_eth0:
   friendly_name: Network out
 sensor.disk_use_percent:
-  friendly_name: Disk used %
+  friendly_name: Disk used /

@@ -124,6 +124,9 @@ script: !include scripts.yaml
 
 mqtt:
   broker: 192.168.1.106
+  port: 1883
+  username: !secret mqtt_username
+  password: !secret mqtt_password
 
 xiaomi_aqara:
   discovery_retry: 5
@@ -131,6 +134,7 @@ xiaomi_aqara:
     - mac: 7811dcb7bb6d
       key: 2ypq9y75v4pgj48f
 
+#Device tracker
 device_tracker:
   - platform: nmap_tracker
     hosts: 192.168.1.0/24
@@ -141,12 +145,27 @@ device_tracker:
      - 192.168.1.102 # Xiaomi gateway 78:11:dc:b7:bb:6d
      - 192.168.1.176 # FPT play b0:46:fc:c0:b2:d8 
      - 192.168.1.253 # RM pro 78:0f:77:00:bf:ac  
-  - platform: mqtt
-    devices:
-      tatdat_iphone: 'hass/tatdat_iphone/localizacion'
-      tatdat_note8: 'hass/tatdatnote8/localizacion'
+  - platform: owntracks
+    max_gps_accuracy: 35
 
 notify:
   - platform: pushbullet
     api_key: !secret pushbullet_key
     name: pushbullet
+
+
+# ZONES #
+zone 1:
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  radius: 500
+  icon: mdi:home
+
+zone 2:
+  name: Work
+  latitude: !secret work_latitude
+  longitude: !secret work_longitude
+  radius: 500
+  icon: mdi:briefcase
+

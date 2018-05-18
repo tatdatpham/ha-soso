@@ -35,16 +35,18 @@ system:
     icon: mdi:settings
     view: yes
     entities:
-      - sensor.disk_use_percent
+      - sensor.disk_use_percent_
       - sensor.disk_free
       - sensor.memory_use_percent
       - sensor.memory_free
       - sensor.processor_use
+      - sensor.cpuspeed
       - sensor.ipv4_address_eth0
       - sensor.network_in_eth0
       - sensor.network_out_eth0
       - sensor.last_boot
       - sensor.since_last_boot
+      - sensor.cert_expiry
 
 internet_speed:
     icon: mdi:speedometer
@@ -63,3 +65,11 @@ weather:
   name: Weather
   entities:
     - input_boolean.weather
+
+#dat_phone_group:
+#  name: Dat Phone
+#  entities:
+#    - sensor.connection_richard
+#    - sensor.gps_accuracy
+#    - sensor.phone_battery_dat_note8
+#   - device_tracker.niemandr_hwnxt
