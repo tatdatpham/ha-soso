@@ -10,23 +10,31 @@
         padding-right:1em;
         position: relative;
       }
-      iron-icon {
-        height: 20px;
+      .iron-icon {
+        height: 18px;
         color: #c8c8c8;
       }
       .temp {
         font-weight: 300;
-        font-size: 5em;
+        font-size: 4em;
         color:#5b5b5b;
         position: absolute;
-        right: .3em;
+        right: .5em;
+      }
+      .tempc {
+        font-weight: 300;
+        font-size: 1.5em;
+        vertical-align: super;
+        color:#5b5b5b;
+        position: absolute;
+        right: 0em;
       }
       .variations {
         font-weight:300;
         color:#8c8c8c;
         list-style:none;
         margin-left:-2em;
-        margin-top: 3.5em;
+        margin-top: 2.5em;
       }
       .variations.right {
         float: right;
@@ -58,7 +66,6 @@
       .forecast .day:first-child {
         margin-left: 0;
       }
-
       .forecast .day:nth-last-child(2) {
         border-right:none;
         margin-right: 0;
@@ -69,17 +76,16 @@
       .lowTemp {
         color: #8c8c8c;
       }
-
       .icon.bigger {
-          width: 10em;
-          height: 10em;
-          margin-top: -4em;
+        width: 10em;
+        height: 10em;
+        margin-top: -4em;
         position: absolute;
+        left: 0em;
       }
-
       .icon {
-          width: 34px;
-          height: 34px;
+          width: 50px;
+          height: 50px;
           display: inline-block;
           vertical-align: middle;
           background-size: contain;
@@ -87,43 +93,53 @@
           background-repeat: no-repeat;
           text-indent: -9999px;
       }
+       .weather {
+        font-weight: 300;
+        font-size: 1.5em;
+        color:#5b5b5b;
+        text-align:center;
+        position: absolute;
+        top: 0em;
+        left: 6em;
+      }
+
     </style>
     <div class="card">
-      <span class="city"></span>
+      <span class="icon bigger" style="background: none, url(/local/weather_icons/animated/[[nowCond]].svg) no-repeat; background-size: contain;"></span>
+      <span class="temp">[[roundedTemp]]</span><span class="tempc">&#176;C</span>
+      <span class="weather">[[nowCondIT]]</span>
       <br>
-      <i class="icon bigger" style="background: none, url(/local/weather_icons/animated/[[nowCond]].svg) no-repeat; background-size: contain;"></i>
-      <span class="temp">[[roundedTemp]]&#176;</span>
       <span>
         <ul class="variations right">
           <template is="dom-if" if="[[weatherObj.attributes.humidity]]">
-              <li><iron-icon icon="mdi:water-percent"></iron-icon>[[weatherObj.attributes.humidity]]<span class="unit">%</span></li>
-        </template>
+              <li><iron-icon icon="mdi:water-percent"></iron-icon> [[weatherObj.attributes.humidity]]<span class="unit">%</span></li>
+          </template>
           <template is="dom-if" if="[[weatherObj.attributes.pressure]]">
-              <li><iron-icon icon="mdi:gauge"></iron-icon>[[weatherObj.attributes.pressure]]<span class="unit">hPa</span></li>
-        </template>
-          <template is="dom-if" if="[[weatherObj.attributes.visibility]]">
-              <li><iron-icon icon="mdi:weather-fog"></iron-icon>[[weatherObj.attributes.visibility]]<span class="unit">m</span></li>
-        </template>
+              <li><iron-icon icon="mdi:gauge"></iron-icon> [[weatherObj.attributes.pressure]]<span class="unit"> hPa</span></li>
+          </template>
+
         </ul>
         <ul class="variations">
-          <li>[[weatherObj.state]]</li>
           <template is="dom-if" if="[[weatherObj.attributes.wind_speed]]">
-            <li><iron-icon icon="mdi:weather-windy"></iron-icon>[[windBearing]] [[weatherObj.attributes.wind_speed]]<span class="unit">m/s</span></li>
-        </template>
+            <li><iron-icon icon="mdi:weather-windy"></iron-icon> [[windBearing]] [[weatherObj.attributes.wind_speed]]<span class="unit"> m/s</span></li>
+          </template>
+          <template is="dom-if" if="[[weatherObj.attributes.visibility]]">
+              <li><iron-icon icon="mdi:weather-fog"></iron-icon> [[weatherObj.attributes.visibility]]<span class="unit">m</span></li>
+          </template>
         </ul>
       </span>
 
       <div class="forecast clear">
         <template is="dom-repeat" items="[[forecast]]">
-        <div class="day"><span class="dayname">[[item.day]]</span>
+        <div class="day"><span class="dayname">[[item.dayIT]]</span>
           <template is="dom-if" if="[[item.condIcon]]">
           <br> <i class="icon" style="background: none, url(/local/weather_icons/animated/[[item.condIcon]].svg) no-repeat; background-size: contain;"></i> 
           </template>
           <template is="dom-if" if="[[item.tempHigh]]">
-          <br> <span class="highTemp">[[item.tempHigh]]&#176;</span> 
+          <br> <span class="highTemp">[[item.tempHigh]]&#176;C</span> 
           </template>
           <template is="dom-if" if="[[item.tempLow]]">
-          <br> <span class="lowTemp">[[item.tempLow]]&#176;</span>
+          <br> <span class="lowTemp">[[item.tempLow]]&#176;C</span>
           </template>
         </div>
       </template>
@@ -140,23 +156,23 @@
     cloudy: 'cloudy',
     fog: 'cloudy',
     hail: 'rainy-7',
-    lightning: 'lightning',
-    'lightning-rainy': 'lightning',
-    'Zwaar bewolkt': 'cloudy',
-    partlycloudy: 'cloudy-day-2',
-    pouring: 'rainy-7',
+    lightning: 'thunder',
+    'lightning-rainy': 'thunder',
+    partlycloudy: 'cloudy-day-3',
+    pouring: 'rainy-6',
     rainy: 'rainy-5',
-    snowy: 'snowy-5',
-    'snowy-rainy': 'snowy-6',
+    snowy: 'snowy-6',
+    'snowy-rainy': 'rainy-7',
     sunny: 'day',
     windy: 'cloudy',
-    'windy-variant': '[]',
+    'windy-variant': 'cloudy-day-3',
     exceptional: '!!',
   };
 
+
   var _DEGREE_TEXT = [
-    'N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE',
-    'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW', 'N'
+    'N', 'NNO', 'NO', 'ONO', 'O', 'OZO', 'ZO', 'ZZO',
+    'Z', 'ZZW', 'ZW', 'WZW', 'W', 'WNW', 'NW', 'NNW', 'N'
   ];
 
   Polymer({
@@ -172,11 +188,11 @@
       weatherObj: {
         type: Object,
         observer: 'checkRequirements',
-        computed: 'comptuteWeatherObj(hass, stateObj)',
+        computed: 'computeWeatherObj(hass, stateObj)',
       },
     },
 
-    comptuteWeatherObj: function (hass, stateObj) {
+    computeWeatherObj: function (hass, stateObj) {
       return stateObj && stateObj.attributes && stateObj.attributes.config && stateObj.attributes.config.weather ? hass.states[stateObj.attributes.config.weather] : null;
     },
 
@@ -184,11 +200,11 @@
       if (!this.weatherObj.attributes.forecast) {
         return [];
       }
-	  
+      
       var data = this.weatherObj.attributes.forecast;
-	  var forecast = [];
-	  var prevDay = '';
-	  
+      var forecast = [];
+      var prevDay = '';
+      
       for (var i = 0; i < data.length; i++) {
         var day = new Date(data[i].datetime).toString().split(' ')[0];
         if (day != prevDay) {
@@ -197,9 +213,16 @@
           } else {
             var tempHigh = Math.round(data[i].temperature * 10) / 10;
           }
-          var tempLow = Math.round(data[i].min_temp * 10) / 10;
+          if (tempHigh == 0) {
+            tempHigh = '0'; // otherwise the value 0 will not be shown on the weather card
+          }
+          var tempLow = Math.round(data[i].templow * 10) / 10;
+          if (tempLow == 0) {
+            tempLow = '0'; // otherwise the value 0 will not be shown on the weather card
+          }
           var condIcon = _WEATHER_TO_ICON[data[i].condition];
-          forecast.push({day:day, tempHigh:tempHigh, tempLow:tempLow, condIcon:condIcon});
+          var dayIT = _DAY_TO_DAY[day];
+          forecast.push({dayIT:dayIT, tempHigh:tempHigh, tempLow:tempLow, condIcon:condIcon});
           prevDay = day;
         } else {
           if (data[i].max_temp) {
@@ -235,17 +258,19 @@
       }
   
       this.nowCond = _WEATHER_TO_ICON[this.weatherObj.state];
+      this.nowCondIT = _WEATHER_TO_NAME[this.weatherObj.state];
       if (this.weatherObj.attributes.temperature) {
       this.roundedTemp = Math.round( this.weatherObj.attributes.temperature * 10) / 10;
       }
-      if (this.weatherObj.attributes.windBearing) {
-      this.windBearing = this.windBearingToText(this.weatherObj.attributes.windBearing);
+      if (this.weatherObj.attributes.wind_bearing) {
+      this.windBearing = this.windBearingToText(this.weatherObj.attributes.wind_bearing);
       }
-	    this.forecast = this.getForecastArray().slice(0, 4);
+        this.forecast = this.getForecastArray().slice(0, 4);
     },
 
     windBearingToText: function (degree) {
-      return _DEGREE_TEXT[((parseInt(degree) + 5.63) / 11.25) | 0];
+      // return _DEGREE_TEXT[((parseInt(degree) + 5.63) / 11.25) | 0];
+      return _DEGREE_TEXT[(parseInt((degree + 11.25) / 22.5))];
     },
   });
 }());

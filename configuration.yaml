@@ -20,10 +20,10 @@ homeassistant:
       custom_ui_state_card: state-card-custom-ui
     input_boolean.weather:
       custom_ui_state_card: custom-weather-card
-      friendly_name: Wetter
+      friendly_name: Weather
       config:
         weather: weather.yweather
-        
+
 # Show links to resources in log and frontend
 #introduction:
 customizer:
