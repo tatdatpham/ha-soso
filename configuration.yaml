@@ -18,7 +18,12 @@ homeassistant:
       custom_ui_state_card: state-card-custom-ui
     cover.*:
       custom_ui_state_card: state-card-custom-ui
-
+    input_boolean.weather:
+      custom_ui_state_card: custom-weather-card
+      friendly_name: Wetter
+      config:
+        weather: weather.yweather
+        
 # Show links to resources in log and frontend
 #introduction:
 customizer:
@@ -28,8 +33,16 @@ customizer:
 frontend:
   extra_html_url:
     - /local/custom_ui/state-card-custom-ui.html
+    - /local/custom_ui/custom-weather-card.html
   extra_html_url_es5:
     - /local/custom_ui/state-card-custom-ui-es5.html
+    - /local/custom_ui/custom-weather-card.html
+
+
+weather:
+  - platform: yweather
+input_boolean:
+  weather:
 
 # Enables configuration UI
 config:
@@ -84,9 +97,7 @@ sun:
 
 
 python_script:
-weather:
-  - platform: yweather
-    name: yweather
+
 
 # Weather prediction
 #sensor:

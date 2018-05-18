@@ -5,6 +5,7 @@ default_view:
       - group.Familia
       - group.bedroom
       - group.guestroom
+      - group.weather
       - group.weather_card_today
       - group.weather_card_forecast
 
@@ -45,3 +46,8 @@ guestroom:
   name: Guest Room
   entities:
     - media_player.kd43x8000e
+
+weather:
+  name: Weather
+  entities:
+    - input_boolean.weather
