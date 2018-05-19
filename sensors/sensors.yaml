@@ -1,14 +1,14 @@
-#- platform: google_travel_time
-#  name: Tat Dat Work Travel
-#  api_key: !secret GOOGLE_TRAVEL_API
-#  origin: Home
-#  destination: Work
+- platform: google_travel_time
+  name: Tat Dat To Work Travel
+  api_key: !secret GOOGLE_TRAVEL_API
+  origin: Home
+  destination: Work
 
-#- platform: google_travel_time
-#  name: Tat Dat Home Travel
-#  api_key: !secret GOOGLE_TRAVEL_API
-#  origin: Work
-#  destination: Home
+- platform: google_travel_time
+  name: Tat Dat To Home Travel
+  api_key: !secret GOOGLE_TRAVEL_API
+  origin: Work
+  destination: Home
 
 - platform: mqtt
   state_topic: 'owntracks/homeassistant/note8'
@@ -22,7 +22,7 @@
     {% endif %}
 - platform: mqtt
   state_topic: 'owntracks/homeassistant/note8'
-  name: Connection (Tat Dat)'
+  name: 'Connection (Tat Dat)'
   value_template: >
     {% if value_json.conn %}
       {% if value_json.conn == 'w' %}

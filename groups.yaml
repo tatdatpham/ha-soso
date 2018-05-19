@@ -17,6 +17,7 @@ batterysensorlevel:
   entities:
     - group.bedroom_batterysensorlevel
 bedroom_batterysensorlevel:
+  name: Bedroom Sensor Battery
   control: hidden
   entities:
     - sensor.battery_xiaomi_temperature
@@ -83,6 +84,11 @@ tatdat_phone_group:
     - sensor.gps_accuracy
     - sensor.phone_battery_tat_dat    
 
+travel_times:
+  name: Travel Times
+  entities:
+    - sensor.tat_dat_to_work_travel
+    - sensor.tat_dat_to_home_travel
 
 #weather group config
 weather:
