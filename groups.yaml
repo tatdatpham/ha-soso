@@ -60,6 +60,7 @@ bedroom:
   entities:
     - sensor.temperature_158d00020f527c
     - sensor.humidity_158d00020f527c
+    - switch.plug_158d0001fa7d6f
     - light.gateway_light_7811dcb7bb6d
 
 guestroom:
@@ -74,6 +75,7 @@ Familia:
     - device_tracker.homeassistant_note8
     - device_tracker.iphonenetfpt
     - device_tracker.laitrungvietnetfpt
+    - device_tracker.galaxyj7primenetfpt
     - device_tracker.android23a7a003bee71167netfpt
 
 tatdat_phone_group:
